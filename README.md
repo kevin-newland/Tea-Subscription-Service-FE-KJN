@@ -1,12 +1,26 @@
-# React + Vite
+# Tea Subscription Service 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. This repo also includes Cypress and Router.
+This is the React frontend for the Tea Subscription Service, a web application that allows admins to manage tea subscriptions. The frontend consumes a Rails API backend, enabling users to view, update, and cancel subscriptions.
 
-Currently, two official plugins are available:
+ ## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+	•	Landing Page: Displays all available tea subscriptions in a card format.
+	•	Subscription Details: Clicking a subscription card shows more details.
+	•	Admin Actions: Admins can cancel subscriptions directly from the UI.
+	•	API Integration: Fetches and updates subscription data from the backend.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+	•	Frontend: React 
+	•	State Management: Local state with useState
+	•	Routing: React Router 
+	•	Styling: CSS(was not the primary focus) 
+	•	API Handling: Fetch API 
+
+
+## Setup
+
+1. Fork and clone the repo
+2. Install gem packages: `bundle install`
+3. View Front End: Type `npm run dev` in console and press enter
