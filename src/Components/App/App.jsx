@@ -7,7 +7,6 @@ import SubscriptionDetails from '../SubscriptionDetails/SubscriptionDetails';
 function App() {
   const [subscriptions, setSubscriptions] = useState([])
   const [specificSubscription, setSpecificSubscription] = useState([])
-  // const [canceledSubscriptions, setCanceledSubscriptions] = useState([]); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,7 +17,6 @@ function App() {
     fetch("http://localhost:3000/api/v1/subscriptions")
     .then(response => response.json())
     .then(data => {
-      // console.log("Fetched Data:", data)
       setSubscriptions(data.data);
   })
     .catch(error => console.log(error.message))
@@ -38,24 +36,11 @@ function App() {
     .catch(error => console.log(error.message))
   }
 
-  // function cancelCustomerSubscription(id) {
-  //   fetch(`http://localhost:3000/api/v1/customer_subscriptions/${id}`, {
-  //     method: 'PATCH',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   })
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     console.log("Fetched cancel Data:", data)
-  //     setCanceledSubscriptions(prev => [...prev, customerId]);
-  // })
-  //   .catch(error => console.log(error.message))
-  // }
-  
   return (
     <main className='App'>
-      
+      <header>
+        <h1>Admin Portal: Tea Subscriptions</h1>
+      </header>
       
       <section className='content'>
         <Routes>
